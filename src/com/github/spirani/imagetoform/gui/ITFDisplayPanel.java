@@ -107,6 +107,10 @@ public class ITFDisplayPanel extends JPanel implements MouseListener {
         }
     }
 
+    public BufferedImage getImage() {
+        return form;
+    }
+
     public double getScale() {
         return scale;
     }
