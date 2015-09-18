@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+version = '0.1'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'commons-logging:commons-logging:1.2'
+    compile 'org.apache.pdfbox:pdfbox:1.8.10'
+}
+
+task fullbuild(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.github.spirani.imagetoform.Main'
+    }
+    baseName = project.name + '-all'
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    with jar
+}
