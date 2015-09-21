@@ -2,7 +2,7 @@
 A Java application to assist with filling out pre-printed forms
 
 ## Screenshot
-![Screenshot](../blob/master/img/itf-scr.png?raw=true)
+![Screenshot](../master/img/itf-scr.png?raw=true)
 
 ## Prerequisites
 - Gradle is required to build this application.
