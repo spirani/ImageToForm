@@ -1,6 +1,9 @@
 # ImageToForm
 A Java application to assist with filling out pre-printed forms
 
+## Screenshot
+![Screenshot](../blob/master/img/itf-scr.png?raw=true)
+
 ## Prerequisites
 - Gradle is required to build this application.
 - A recent version of the Java Development Kit should be installed.
